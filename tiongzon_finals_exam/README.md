@@ -1,16 +1,30 @@
-# tiongzon_finals_exam
+# bloc_finals_exam
 
-A new Flutter project.
+A finals exam to test students skills on applying the BloC architecture in this task management app.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone / Download / Fork the initial project files.
+1. Make sure that you can run the base project before starting any development tasks.
+1. Push this working base project into your GitHub repository and make sure I have enough access to the project so I can grade them accordingly.
 
-A few resources to get you started if this is your first Flutter project:
+## Features required
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+All the legwork required to get the UI running is already done. All you need to do is integrate bloc given the use cases below.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Can add tasks via floating action button or the Pending Tasks AppBar's action item
+- Can set the task to done when the checkbox is toggled on
+- Completed tasks should go into the 'Completed Tasks' tab
+- When checkbox is toggled off, the task should move back to 'Pending Tasks' tab
+- Can edit task information (i.e., task's title and description)
+- Can move tasks to recycle bin
+- Can permanently delete tasks from recycle bin
+- Can delete all tasks from recycle bin via 'Delete all tasks' appbar action
+- Can mark the task as favorite and avorite tasks should automatically go to the 'Favorite Tasks' tab
+- When task is removed from bookmarks, the task should automatically be removed from 'Favorite Tasks' tab
+- Can switch between dark and light themes
+
+## Working Demo
+
+Please see the following link for a working demonstration
+<https://youtu.be/OcAQWenCmwo>

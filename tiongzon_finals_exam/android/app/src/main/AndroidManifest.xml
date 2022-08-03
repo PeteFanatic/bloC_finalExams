@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tiongzon_finals_exam">
+    package="scs.usjr.bloc_finals_exam">
    <application
-        android:label="tiongzon_finals_exam"
+        android:label="bloc_finals_exam"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
