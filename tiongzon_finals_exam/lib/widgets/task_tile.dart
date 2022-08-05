@@ -5,7 +5,7 @@ import '../models/task.dart';
 import 'add_edit_task.dart';
 import 'popup_menu.dart';
 
-import '../blocs/blocExports.dart';
+import '../bloc/blocExports.dart';
 
 class TaskTile extends StatelessWidget {
   const TaskTile({Key? key, required this.task}) : super(key: key);
