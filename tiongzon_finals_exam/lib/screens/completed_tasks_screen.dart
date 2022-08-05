@@ -1,4 +1,4 @@
-import '../bloc/blocExports.dart';
+import 'package:bloc_finals_exam/bloc/blocExports.dart';
 import 'package:flutter/material.dart';
 
 import '../models/task.dart';
