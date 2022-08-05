@@ -5,6 +5,8 @@ import '../models/task.dart';
 import 'add_edit_task.dart';
 import 'popup_menu.dart';
 
+import '../blocs/blocExports.dart';
+
 class TaskTile extends StatelessWidget {
   const TaskTile({Key? key, required this.task}) : super(key: key);
 
@@ -23,6 +25,12 @@ class TaskTile extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _removeOrDeleteTask(BuildContext context, Task task) {
+    task.isDeleted!
+        ? context.read<TasksBloc>().add(DeleteTask(task: task))
+        : context.read<TasksBloc>().add(RemoveTask(task: task));
   }
 
   @override
@@ -66,16 +74,28 @@ class TaskTile extends StatelessWidget {
           children: [
             Checkbox(
                 value: task.isDone,
-                onChanged: task.isDeleted! ? null : (value) {}),
+                onChanged: task.isDeleted!
+                    ? null
+                    : (value) {
+                        context.read<TasksBloc>().add(UpdateTask(task: task));
+                      }),
             PopupMenu(
               task: task,
               editCallback: () {
                 Navigator.pop(context);
                 _editTask(context);
               },
-              likeOrDislikeCallback: () {},
-              cancelOrDeleteCallback: () {},
-              restoreTaskCallback: () => {},
+              likeOrDislikeCallback: () {
+                context.read<TasksBloc>().add(MarkFavoriteOrUnfavoriteTask(
+                      task: task,
+                    ));
+              },
+              cancelOrDeleteCallback: () {
+                _removeOrDeleteTask(context, task);
+              },
+              restoreTaskCallback: () {
+                context.read<TasksBloc>().add(RestoreTask(task: task));
+              },
             ),
           ],
         ),
