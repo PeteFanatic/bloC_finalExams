@@ -3,7 +3,7 @@ import 'package:path_provider/path_provider.dart';
 
 import 'app_router.dart';
 import 'app_themes.dart';
-import 'blocs/bloc_exports.dart';
+import 'bloc/blocExports.dart';
 import 'screens/tabs_screen.dart';
 
 void main() async {
